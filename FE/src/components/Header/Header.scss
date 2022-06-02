@@ -1,0 +1,31 @@
+.header {
+  min-width: 100%;
+  background-color: #f6f6f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header__logo_title {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 55px;
+  height: 55px;
+}
+
+.header__title {
+  margin-left: 16px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+}
+
+.header__author {
+  margin-right: 28px;
+  font-size: 14px;
+  line-height: 24px;
+}

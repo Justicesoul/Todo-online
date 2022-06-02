@@ -1,0 +1,109 @@
+.todo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.todo__heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.todo__logout-button {
+  margin-left: 20px;
+  &:hover {
+    background-color: red;
+    color: white;
+    border-color: red;
+  }
+}
+
+.todo__wrapper {
+  width: 100%;
+  padding: 20px;
+}
+
+.todo__subjects {
+  position: relative;
+  background-color: #f6f6f8;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.todo__subject-heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.todo__todos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: 10px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.todo__task {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.todo__task-author,
+.todo__task-text {
+  margin-bottom: 10px;
+}
+
+.todo__task-author {
+  font-weight: 700;
+}
+
+.todo__task-status--change {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.todo__delete-todo {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.268);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  z-index: 2;
+}
+
+.todo__delete-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 899px) {
+  .todo {
+    width: 65%;
+  }
+}
+
+@media (max-width: 439px) {
+  .todo {
+    width: 100%;
+  }
+}

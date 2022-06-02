@@ -1,0 +1,26 @@
+.users {
+  background-color: #f6f6f8;
+  width: 20%;
+  min-height: 100%;
+  max-width: 400px;
+  padding: 15px;
+}
+
+.users__list {
+  margin: 10px 0;
+}
+
+.users__user {
+  background-color: white;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  overflow: clip;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 899px) {
+  .users {
+    display: none;
+  }
+}

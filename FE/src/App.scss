@@ -1,0 +1,17 @@
+@import 'assets/styles/reset';
+
+.button {
+  background-color: rgba(0, 111, 255, 1);
+  color: white;
+  padding: 6px 16px;
+  margin: 0 2px;
+  border: 1px solid rgba(0, 111, 255, 1);
+  margin-bottom: 20px;
+  line-height: 24px;
+  border-radius: 4px;
+  transition: 0.2s;
+  &:hover {
+    color: rgba(0, 111, 255, 1);
+    background-color: white;
+  }
+}
