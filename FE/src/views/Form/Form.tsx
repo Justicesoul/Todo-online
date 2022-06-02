@@ -31,7 +31,7 @@ const Form: FC<FormProps> = ({ userName, setUserName, setView }) => {
       return;
     }
 
-    axios.post('http://localhost:3000', { userName }).then((res) => {
+    axios.post('http://localhost:3001', { userName }).then((res) => {
       if (res.data) {
         setErrorMessage(res.data);
         return;
@@ -44,7 +44,7 @@ const Form: FC<FormProps> = ({ userName, setUserName, setView }) => {
   return (
     <form className="form" onSubmit={onFormSubmit}>
       <div className="form__wrapper">
-        <label>
+        <label className='form__label'>
           <input
             className="form__input"
             type="text"

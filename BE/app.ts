@@ -97,9 +97,8 @@ io.on('connection', socket => {
     })
     socket.broadcast.emit('USERS:LOG_OUT', users);
   })
-
 })
 
-server.listen(3000, () => {
+server.listen(3001, () => {
   console.log('server is running')
 })
