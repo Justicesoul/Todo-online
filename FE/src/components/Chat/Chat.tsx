@@ -1,16 +1,14 @@
 import socket from '../../utils/socket';
 import './Chat.scss';
 import Button from '../Button/Button';
+import { MessagesType } from '../../assets/types/types';
 
 import { ChangeEvent, FC, memo, useCallback, useState } from 'react';
 
 type ChatProps = {
   userName: string;
   setView: (arr: string) => void;
-  messages: {
-    userName: string;
-    message: string;
-  }[];
+  messages: MessagesType;
 };
 
 const Chat: FC<ChatProps> = ({ userName, messages }) => {

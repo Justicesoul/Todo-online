@@ -1,19 +1,12 @@
 import './CreateNewTask.scss';
 import Button from '../Button/Button';
+import { ToDoType } from '../../assets/types/types';
 
 import { FC, memo, useState } from 'react';
 import socket from '../../utils/socket';
 
 type NewTaskProps = {
-  todos: {
-    subject: string;
-    tasks: {
-      author: string;
-      todo: string;
-      done: boolean;
-      id: number;
-    }[];
-  }[];
+  todos: ToDoType;
   createTask: boolean;
   userName: string;
   setCreateTask: (arr: boolean) => void;
@@ -42,6 +35,7 @@ const CreateNewTask: FC<NewTaskProps> = ({
         },
       ],
     };
+
     if (!newTaskText || !taskSubject || taskSubject === '- Choose subject -') {
       setError(true);
     } else {

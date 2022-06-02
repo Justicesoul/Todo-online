@@ -1,6 +1,7 @@
 import Chat from '../../components/Chat/Chat';
 import Users from '../../components/Users/Users';
 import Todo from '../../components/Todo/Todo';
+import { MessagesType, ToDoType, UsersType } from '../../assets/types/types';
 import './Main.scss';
 
 import { FC, memo } from 'react';
@@ -9,23 +10,9 @@ type MainProps = {
   userName: string;
   setView: (arr: string) => void;
   setUserName: (arr: string) => void;
-  messages: {
-    userName: string;
-    message: string;
-  }[];
-  users: {
-    userName: string;
-    id: string;
-  }[];
-  todos: {
-    subject: string;
-    tasks: {
-      author: string;
-      todo: string;
-      done: boolean;
-      id: number;
-    }[];
-  }[];
+  messages: MessagesType;
+  users: UsersType;
+  todos: ToDoType;
 };
 
 const Main: FC<MainProps> = ({

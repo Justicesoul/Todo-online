@@ -1,12 +1,10 @@
 import './Users.scss';
+import { UsersType } from '../../assets/types/types';
 
 import { FC, memo } from 'react';
 
 type UsersProps = {
-  users: {
-    userName: string;
-    id: string;
-  }[];
+  users: UsersType;
 };
 
 const Users: FC<UsersProps> = ({ users }) => {

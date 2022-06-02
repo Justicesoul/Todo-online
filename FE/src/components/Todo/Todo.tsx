@@ -2,6 +2,7 @@ import './Todo.scss';
 import Button from '../Button/Button';
 import deleteIcon from '../../assets/images/clear.svg';
 import garbageIcon from '../../assets/images/garbage.png';
+import { ToDoType } from '../../assets/types/types';
 
 import { FC, memo, useState } from 'react';
 import socket from '../../utils/socket';
@@ -11,15 +12,7 @@ type TodoProps = {
   setView: (arr: string) => void;
   userName: string;
   setUserName: (arr: string) => void;
-  todos: {
-    subject: string;
-    tasks: {
-      author: string;
-      todo: string;
-      done: boolean;
-      id: number;
-    }[];
-  }[];
+  todos: ToDoType;
 };
 
 const Todo: FC<TodoProps> = ({ setView, userName, setUserName, todos }) => {
