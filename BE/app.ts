@@ -1,9 +1,14 @@
+import cors from "cors";
+
 const express = require('express')
 const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
 app.use(express.json());
+app.use(cors({
+  origin: '*'
+}));
 
 let users = []
 let messages = []
