@@ -6,8 +6,9 @@ const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: '*'
+  origin: 'http://localhost:3000'
 }));
 
 let users = []
